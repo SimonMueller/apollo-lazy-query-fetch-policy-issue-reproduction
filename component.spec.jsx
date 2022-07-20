@@ -7,7 +7,7 @@ it('fetches the data two times as the fetch policy is set to "no-cache"', async 
     const spy = createResultSpy();
     const view = render(<Component fetchPolicy="no-cache" input="something"/>, {wrapper: wrapper(spy)});
 
-    view.rerender(<Component input={"something2"}/>)
+    view.rerender(<Component input={"something 2"}/>)
 
     await waitFor(() => expect(spy).toHaveBeenCalledTimes(2));
 });
@@ -16,7 +16,7 @@ it('fetches the data one time as the fetch policy is set to "cache-first"', asyn
     const spy = createResultSpy();
     const view = render(<Component fetchPolicy="cache-first" input="something"/>, {wrapper: wrapper(spy)});
 
-    view.rerender(<Component input={"something2"}/>)
+    view.rerender(<Component input={"something 2"}/>)
 
     await waitFor(() => expect(spy).toHaveBeenCalledTimes(1));
 });

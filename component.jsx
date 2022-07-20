@@ -14,7 +14,7 @@ export default function Component({input, fetchPolicy}) {
 
     useEffect(() => {
         getData({variables: {input: "my input"}});
-    }, [input])
+    }, [input, getData])
 
     return <div>{JSON.stringify(data)}</div>
 }
