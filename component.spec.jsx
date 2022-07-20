@@ -14,7 +14,7 @@ it('fetches the data two times as the fetch policy is set to "no-cache"', async 
 
 it('fetches the data one time as the fetch policy is set to "cache-first"', async () => {
     const spy = createResultSpy();
-    const view = render(<Component fetchPolicy="no-cache" input="cache-first"/>, {wrapper: wrapper(spy)});
+    const view = render(<Component fetchPolicy="cache-first" input="something"/>, {wrapper: wrapper(spy)});
 
     view.rerender(<Component input={"something2"}/>)
 
